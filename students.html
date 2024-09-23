@@ -15,7 +15,7 @@
 <body>
 
      <!-- Navbar -->
-     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand fw-bold" href="#">University of Major Melons</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,14 +43,17 @@
                     <li class="nav-item">
                         <a href="#" class="nav-link active" id="signupBtn" aria-current="page" data-bs-toggle="modal" data-bs-target="#signup">Signup</a>
                     </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active" id="logoutButton" data-bs-toggle="modal" data-bs-target="#logoutModal">Logout</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
     <!-- Navbar End -->
-
-    <!-- Login Modal Start -->
-    <div class="modal fade" id="login" tabindex="-1" aria-labelledby="loginLabel" aria-hidden="true">
+     
+     <!-- Login Modal Start -->
+     <div class="modal fade" id="login" tabindex="-1" aria-labelledby="loginLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -77,6 +80,26 @@
         </div>
     </div>
     <!-- Login Modal End -->
+
+    <!-- Logout Modal Start -->
+    <div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="logoutLabel">Logout</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to log out?</p>
+                </div>
+                <div class="modal-footer">
+                    <button id="confirmLogout" class="btn btn-danger">Yes, Logout</button>
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Logout Modal End -->
 
     <!-- SignUp Modal Start -->
     <div class="modal fade" id="signup" tabindex="-1" aria-labelledby="signupLabel" aria-hidden="true">

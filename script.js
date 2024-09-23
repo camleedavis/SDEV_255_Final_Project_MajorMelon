@@ -133,3 +133,28 @@ document.addEventListener('DOMContentLoaded', function() {
           alert('Passwords do not match!');
         }
     });
+    let isLoggedIn = true; // Change this to true for debugging
+
+    function checkLoginStatus() {
+        const logoutButton = document.getElementById('logoutButton');
+        if (isLoggedIn) {
+            logoutButton.style.display = 'block'; // Show logout button
+            document.getElementById('loginBtn').style.display = 'none'; // Hide login button
+            document.getElementById('signupBtn').style.display = 'none'; // Hide signup button
+        } else {
+            logoutButton.style.display = 'none'; // Hide logout button
+            document.getElementById('loginBtn').style.display = 'block'; // Show login button
+            document.getElementById('signupBtn').style.display = 'block'; // Show signup button
+        }
+    }
+    
+    // Call the function on page load
+    window.onload = checkLoginStatus;
+    
+    // Handle logout confirmation
+    document.getElementById('confirmLogout').onclick = function() {
+        alert('You have been logged out!');
+        isLoggedIn = false; // Set login status to false
+        localStorage.removeItem('userName'); // Clear user data
+        checkLoginStatus(); // Update button visibility
+    };
